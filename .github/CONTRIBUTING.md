@@ -1,64 +1,95 @@
-# 🤝 Contribution Guidelines for CloudCostControl-Global-FreeTier-SaaS-PaaS-IaaS-Awesome-List
+# 🚀 Contributing to CloudCostControl-FreeTier-Cloud-Services-Awesome-List
 
-As the Apex Technical Authority, we uphold the highest standards of collaboration, precision, and technical excellence. This repository is a living document serving the global DevOps and Cloud Architecture community. Adherence to these guidelines ensures the integrity and longevity of this critical resource.
+We welcome your contributions to `CloudCostControl-FreeTier-Cloud-Services-Awesome-List`! As a community-driven resource for optimizing cloud costs, your input is invaluable. This repository adheres to the stringent standards set by the **Apex Technical Authority**, ensuring a high-velocity, zero-defect, and future-proof project.
 
-## 1. Philosophy & Core Principles
+## 1. Our Guiding Principles
 
-We build for the future based on **Zero-Defect, High-Velocity, Future-Proof** engineering principles. All contributions must align with:
+*   **Apex Technical Authority Standards:** All contributions must align with the rigorous requirements outlined by the Apex Technical Authority, emphasizing professional archival and elite architecture. (See `.github/AGENTS.md` for detailed directives).
+*   **Zero-Defect:** Strive for impeccable code and documentation. Thorough testing and validation are paramount.
+*   **High-Velocity:** Optimize workflows for rapid iteration and deployment.
+*   **Future-Proof:** Design with scalability, maintainability, and evolving cloud landscapes in mind.
+*   **Community-Driven:** This is a collaborative effort. Respect diverse perspectives and foster an inclusive environment.
 
-*   **DRY (Don't Repeat Yourself):** Ensure lists are deduplicated and standardized.
-*   **SOLID:** Maintain architectural clarity, even in an Awesome List format (e.g., consistent categorization).
-*   **YAGNI (You Ain't Gonna Need It):** Avoid speculative additions; focus on currently available, functional free tiers.
+## 2. Getting Started
 
-## 2. The Collaboration Workflow
+### 2.1. Prerequisites
 
-All contributions must follow a structured process to maintain list quality and prevent systemic errors.
+*   **Git:** Ensure you have Git installed and configured.
+*   **Node.js & npm/yarn/pnpm:** For front-end development and build tools (if applicable).
+*   **Python 3.10+:** Essential for the core functionality of this project. Ensure `uv` is installed for package management.
+*   **Ruff:** For linting and formatting.
+*   **Browser:** Latest versions of Chrome, Firefox, Safari.
 
-1.  **Fork the Repository:** Create your own copy of `chirag127/CloudCostControl-Global-FreeTier-SaaS-PaaS-IaaS-Awesome-List`.
-2.  **Branch:** Create a feature branch from `main` for your changes:
+### 2.2. Cloning the Repository
+
+bash
+git clone https://github.com/chirag127/CloudCostControl-FreeTier-Cloud-Services-Awesome-List.git
+cd CloudCostControl-FreeTier-Cloud-Services-Awesome-List
+
+
+### 2.3. Development Environment Setup
+
+While this project primarily curates an 'Awesome List' and may not have a complex backend, any development or updates should follow these guidelines:
+
+1.  **Install Python Dependencies:**
     bash
-    git checkout -b feature/add-new-service-name
+    uv pip install -r requirements.txt
     
-3.  **Commit:** Make atomic, clear commits that precisely describe the addition or correction. Use conventional commits where applicable (e.g., `feat: Add new XYZ PaaS offering`).
-4.  **Verify:** Before submission, ensure your additions comply with the required metadata schema (Name, Category, Free Tier Details, Link).
-5.  **Push:** Push your branch to your forked repository.
-6.  **Pull Request (PR):** Open a Pull Request targeting the `main` branch of `chirag127/CloudCostControl-Global-FreeTier-SaaS-PaaS-IaaS-Awesome-List`.
+    *Note: If specific development or testing dependencies are needed, they will be listed in `dev-requirements.txt` or similar.* 
 
-## 3. Pull Request (PR) Requirements
+2.  **Install Project Hooks (Optional but Recommended):**
+    bash
+    pip install pre-commit
+    pre-commit install
+    
+    This will run linters and formatters automatically before each commit.
 
-Every Pull Request **MUST** conform to the following criteria, validated by automated checks and peer review.
+## 3. Contribution Workflow
 
-### A. Mandatory PR Template Use
+We follow the standard GitHub Pull Request workflow:
 
-Use the provided PR Template (`.github/PULL_REQUEST_TEMPLATE.md`). Ensure you explicitly detail:
+1.  **Fork the Repository:** Create your own fork of the `CloudCostControl-FreeTier-Cloud-Services-Awesome-List` repository.
+2.  **Create a New Branch:** Branch out from the `main` branch for your specific feature or fix.
+    bash
+    git checkout -b feature/your-feature-name
+    
+3.  **Make Your Changes:** Implement your contribution. Ensure it adheres to the project's standards and principles.
+    *   **For List Additions/Updates:** Follow the established format in the main list file (e.g., `README.md`). Verify any new services align with the 'free-tier' and 'cost-optimization' ethos.
+    *   **For Code Changes:** Ensure all code is well-documented, adheres to PEP 8 (as enforced by Ruff), and includes comprehensive tests.
+4.  **Test Your Changes:** Run the test suite.
+    bash
+    pytest
+    
+    Ensure all tests pass and coverage remains high.
+5.  **Lint and Format:** Ensure your code is clean and formatted.
+    bash
+    ruff check .
+    ruff format .
+    
+6.  **Commit Your Changes:** Commit with clear, concise messages.
+    bash
+    git add .
+    git commit -m "feat: Add new category for AI-powered cost analysis tools"
+    
+7.  **Push to Your Fork:** Push your branch to your forked repository.
+    bash
+    git push origin feature/your-feature-name
+    
+8.  **Open a Pull Request:** Create a Pull Request against the `main` branch of the original `chirag127/CloudCostControl-FreeTier-Cloud-Services-Awesome-List` repository.
+    *   Clearly describe your changes and the problem they solve.
+    *   Reference any relevant issues.
 
-*   **What was added/changed?** (List the specific service(s) or correction(s).)
-*   **Why does it belong?** (Justification based on the free-tier criteria.)
-*   **Architectural Compliance Check:** Confirm that the entry adheres to established formatting standards.
+## 4. Code of Conduct
 
-### B. Review Process
+This project is governed by the Contributor Covenant, version 4.0. Please read the full text in the [CODE_OF_CONDUCT.md](https://github.com/chirag127/CloudCostControl-FreeTier-Cloud-Services-Awesome-List/blob/main/CODE_OF_CONDUCT.md) file to understand what actions, in general, are expected and forbidden in our community. Harassment and other unacceptable behavior are not tolerated.
 
-*   **Automated Checks:** Your PR must pass all checks initiated by `.github/workflows/ci.yml` (Linter checks, Markdown validation, etc.).
-*   **Maintainer Review:** A maintainer will review the structure, accuracy, and formatting. Be prepared to iterate based on feedback.
+## 5. Reporting Issues and Suggesting Features
 
-## 4. Reporting Issues (Bug Reports & Service Degradation)
+*   **Issues:** Please use the GitHub Issues tracker to report bugs or problems. Provide detailed steps to reproduce the issue and relevant environment information.
+*   **Feature Requests:** Suggest new features or improvements via GitHub Issues. Be specific about the desired functionality and its benefits.
 
-If you discover a broken link, an outdated free-tier policy, or a service that no longer qualifies:
+## 6. License
 
-1.  **DO NOT** open an issue labeled `bug` unless it concerns the repository structure or build process itself.
-2.  **Preferred Action (List Maintenance):** Open a Pull Request immediately with the correction, referencing the outdated information.
-3.  **If an Issue Must Be Opened:** Use the provided template (`.github/ISSUE_TEMPLATE/bug_report.md`). Clearly label the service, provide the current status, and cite the official source confirming the change.
+By contributing to `CloudCostControl-FreeTier-Cloud-Services-Awesome-List`, you agree that your contributions will be licensed under the **CC BY-NC 4.0 License**. See the [LICENSE](https://github.com/chirag127/CloudCostControl-FreeTier-Cloud-Services-Awesome-List/blob/main/LICENSE) file for details.
 
-## 5. Repository Security & Trust
-
-We take the integrity of this community resource seriously. If you discover a security vulnerability in the repository structure, CI/CD pipeline, or documentation generation process, please follow the established Security Policy immediately:
-
-*   Refer to: **[SECURITY.md](https://github.com/chirag127/CloudCostControl-Global-FreeTier-SaaS-PaaS-IaaS-Awesome-List/security/advisories)**
-
-## 6. Code of Conduct
-
-This project adheres to the Contributor Covenant Code of Conduct. We expect all participants to interact respectfully and constructively. Harassment or abusive language will result in immediate removal from contribution privileges.
-
---- 
-
-*This document is governed by the same principles of clarity and precision applied to the list contents. For deeper technical alignment, consult the **AGENTS.md** file.*
+--- EOD ---
