@@ -1,16 +1,54 @@
+# badges.yml
+# Configuration file for shields.io badges used in README.md
+# Apex Technical Authority Configuration - December 2025 Standard
+
+repository_name: "CloudCostControl-FreeTier-Resource-List"
+username: "chirag127"
+style: "flat-square"
+
 badges:
-  - name: Build Status
-    url: https://github.com/chirag127/CloudCostControl-Global-FreeTier-SaaS-PaaS-IaaS-Awesome-List/actions/workflows/ci.yml/badge.svg
-    markdown: "[![CI Status](https://github.com/chirag127/CloudCostControl-Global-FreeTier-SaaS-PaaS-IaaS-Awesome-List/actions/workflows/ci.yml/badge.svg?branch=main&style=flat-square)](https://github.com/chirag127/CloudCostControl-Global-FreeTier-SaaS-PaaS-IaaS-Awesome-List/actions/workflows/ci.yml)"
-  - name: Language
-    url: https://img.shields.io/badge/Language-HTML-orange?style=flat-square
-    markdown: "![Language](https://img.shields.io/badge/Language-HTML-orange?style=flat-square)"
-  - name: Markdown Linting
-    url: https://img.shields.io/badge/Linting-Markdown%20Lint-blueviolet?style=flat-square
-    markdown: "![Markdown Lint](https://img.shields.io/badge/Linting-Markdown%20Lint-blueviolet?style=flat-square)"
-  - name: License
-    url: https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey?style=flat-square
-    markdown: "[![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey?style=flat-square)](LICENSE)"
-  - name: GitHub Stars
-    url: https://img.shields.io/github/stars/chirag127/CloudCostControl-Global-FreeTier-SaaS-PaaS-IaaS-Awesome-List?style=flat-square&color=yellow
-    markdown: "[![GitHub Stars](https://img.shields.io/github/stars/chirag127/CloudCostControl-Global-FreeTier-SaaS-PaaS-IaaS-Awesome-List?style=flat-square&color=yellow)](https://github.com/chirag127/CloudCostControl-Global-FreeTier-SaaS-PaaS-IaaS-Awesome-List/stargazers)"
+  - name: "Build Status"
+    path: "/actions/workflows/ci.yml"
+    label: "Build"
+    color: "blue"
+
+  - name: "Code Coverage"
+    path: "/codecov/c/gh/chirag127/CloudCostControl-FreeTier-Resource-List"
+    label: "Coverage"
+    color: "green"
+
+  - name: "Main Language"
+    path: "/badge/Language-HTML-informational"
+    label: "Language"
+    color: "orange"
+
+  - name: "License"
+    path: "/badge/License-CC%20BY-NC%204.0-lightgrey"
+    label: "License"
+    color: "blue"
+
+  - name: "GitHub Stars"
+    path: "/stars/badge"
+    label: "Stars"
+    color: "yellowgreen"
+
+  - name: "Topic - Cost Optimization"
+    path: "/badge/Topic-Cloud%20Cost%20Optimization-blue?style=flat-square"
+    label: "Topic"
+    color: "blue"
+
+  - name: "Topic - DevOps"
+    path: "/badge/Topic-DevOps-success?style=flat-square"
+    label: "Topic"
+    color: "blueviolet"
+
+# Mapping structure for easy README generation:
+# Badge Name -> Markdown String
+markdown_map:
+  Build Status: "[![Build Status](https://img.shields.io/github/actions/workflow/status/chirag127/CloudCostControl-FreeTier-Resource-List/ci.yml?label=Build&style=flat-square)](https://github.com/chirag127/CloudCostControl-FreeTier-Resource-List/actions/workflows/ci.yml)"
+  Code Coverage: "[![Code Coverage](https://img.shields.io/codecov/c/gh/chirag127/CloudCostControl-FreeTier-Resource-List?label=Coverage&style=flat-square)](https://codecov.io/gh/chirag127/CloudCostControl-FreeTier-Resource-List)"
+  Main Language: "[![Language](https://img.shields.io/badge/Language-HTML-orange?style=flat-square)](https://www.w3.org/TR/html5/)"
+  License: "[![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-blue?style=flat-square)](LICENSE)"
+  GitHub Stars: "[![GitHub Stars](https://img.shields.io/github/stars/chirag127/CloudCostControl-FreeTier-Resource-List?style=flat-square)](https://github.com/chirag127/CloudCostControl-FreeTier-Resource-List)"
+  Topic - Cost Optimization: "[![Topic - Cloud Cost Optimization](https://img.shields.io/badge/Topic-Cloud%20Cost%20Optimization-blue?style=flat-square)](https://github.com/chirag127/CloudCostControl-FreeTier-Resource-List/topics/cloud-cost-optimization)"
+  Topic - DevOps: "[![Topic - DevOps](https://img.shields.io/badge/Topic-DevOps-blueviolet?style=flat-square)](https://github.com/chirag127/CloudCostControl-FreeTier-Resource-List/topics/devops)"
